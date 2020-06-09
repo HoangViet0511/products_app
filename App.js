@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import {createStore, applyMiddleware,compose} from 'redux';
 import {Provider} from 'react-redux';
+import createSagaMiddleware from 'redux-saga';
 import thunk from 'redux-thunk';
 import AppContainer from './app/navigator';
 

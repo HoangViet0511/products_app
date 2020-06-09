@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "620682088080",
+    "firebase_url": "https://productapp-85dcc.firebaseio.com",
+    "project_id": "productapp-85dcc",
+    "storage_bucket": "productapp-85dcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620682088080:android:5e17f3db3b71ba3dd7d215",
+        "android_client_info": {
+          "package_name": "com.HV.ProductApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620682088080-0o1gcrudbtfk7lvujk1donu1ep9nvfe4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXOSHplsLI3Y59gqX5pxqzyrQmd3mzALw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620682088080-0o1gcrudbtfk7lvujk1donu1ep9nvfe4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "620682088080-9207gn6vg2rhljp9crhr45b91hvjja4r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.HV.ProductApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
