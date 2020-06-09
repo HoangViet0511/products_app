@@ -10,7 +10,6 @@ import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
   Text,
 } from 'react-native';
@@ -26,9 +25,9 @@ import AppContainer from './app/navigator';
 
 const App = () =>  {
   return (
-    <View>
+  
       <AppContainer />
-    </View>
+    
   );
 };
 

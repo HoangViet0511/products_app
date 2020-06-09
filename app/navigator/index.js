@@ -27,14 +27,11 @@ const BottomTab = () => {
           tabBarIcon: ({color}) => <Icon name="home" size={25} color={color} />,
         }}
       />
-      
       <Tabs.Screen
         name="Products"
         component={ProductsScreen}
         options={{
-          tabBarIcon: ({color}) => (
-            <Icon name="inbox" size={25} color={color} />
-          ),
+          tabBarIcon: ({color}) => <Icon name="inbox" size={25} color={color} />,
         }}
       />
     </Tabs.Navigator>
