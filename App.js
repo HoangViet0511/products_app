@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -18,6 +18,8 @@ import {Provider} from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import thunk from 'redux-thunk';
 import AppContainer from './app/navigator';
+import SplashScreen from 'react-native-splash-screen';
+
 
 //const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -25,6 +27,12 @@ import AppContainer from './app/navigator';
 
 
 const App = () =>  {
+
+    useEffect(() => {
+        SplashScreen.hide();
+      }, []);
+
+
   return (
   
       <AppContainer />
@@ -33,3 +41,4 @@ const App = () =>  {
 };
 
 export default App;
+

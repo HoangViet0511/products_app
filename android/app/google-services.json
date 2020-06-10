@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:620682088080:android:5e17f3db3b71ba3dd7d215",
+        "mobilesdk_app_id": "1:620682088080:android:0b5dc24e52e9630ed7d215",
         "android_client_info": {
-          "package_name": "com.HV.ProductApp"
+          "package_name": "com.productapp"
         }
       },
       "oauth_client": [
