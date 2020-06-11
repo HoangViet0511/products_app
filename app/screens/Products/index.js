@@ -10,13 +10,15 @@ import {
 import db from '../../components/firebase/config';
 
 const ProductsScreen = () => {
-  const addItem = item => {
+  /*const addItem = item => {
     db.ref('/items').push({
       name: item,
     });
   };
 
-  const [state, setState] = useState(null);
+  const state = {
+    name: ''
+  };
 
   const handleChange = e => {
     setState({
@@ -27,16 +29,16 @@ const ProductsScreen = () => {
   const handleSubmit = () => {
     addItem(state.name);
     AlertIOS.alert('Item saved successfully');
-  };
+  };*/
 
   return (
     <SafeAreaView style={styles.main}>
       <Text style={styles.title}>Add Item</Text>
-      <TextInput style={styles.itemInput} onChange={handleChange} />
+      <TextInput style={styles.itemInput} /*onChange={handleChange}*/ />
       <TouchableHighlight
         style={styles.button}
         underlayColor="white"
-        onPress={handleSubmit}>
+        /*onPress={handleSubmit}*/>
         <Text style={styles.buttonText}>Add</Text>
       </TouchableHighlight>
     </SafeAreaView>
