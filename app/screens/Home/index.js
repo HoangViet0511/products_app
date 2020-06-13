@@ -66,7 +66,6 @@ const HomeScreen = () => {
           }}
         />
       </View>
-      
     </SafeAreaView>
   );
 };
@@ -75,6 +74,7 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   categoryContainer: {
+    flex: 1,
     marginTop: 20,
   },
   categoryItem: {

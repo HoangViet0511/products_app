@@ -10,7 +10,7 @@ import React, {useEffect} from 'react';
 import {SafeAreaView, StyleSheet, View, Text} from 'react-native';
 import {createStore, applyMiddleware, compose} from 'redux';
 import {Provider} from 'react-redux';
-import createSagaMiddleware from 'redux-saga';
+import { call, put, takeEvery } from 'redux-saga/effects';
 import thunk from 'redux-thunk';
 import AppContainer from './app/navigator';
 import reducer from './app/redux/reducers';

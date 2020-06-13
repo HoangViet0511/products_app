@@ -35,6 +35,9 @@ target 'productApp' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging', '~> 6.2.0'
+
   target 'productAppTests' do
     inherit! :search_paths
     # Pods for testing

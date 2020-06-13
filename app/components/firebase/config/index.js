@@ -1,13 +1,13 @@
-import Firebase from 'firebase';
+import * as firebase from 'firebase';
 
-let config = {
+const config = {
     apiKey: 'AIzaSyAOoKlVdFXSFHV7r4wkTU_baTw3bX1V9Zo',
-    authDomain: 'productapp-85dcc.firebaseio.com',
+    authDomain: 'productapp-85dcc.firebaseapp.com',
     databaseURL: 'productapp-85dcc.firebaseio.com',
     projectId: 'productapp-85dcc',
     storageBucket: 'rnfirebase-85dcc.appspot.com',
     messagingSenderId: '',
 };
-let app = Firebase.initializeApp(config);
+firebase.initializeApp(config);
 
-export const db = app.database();
+export {firebase};
