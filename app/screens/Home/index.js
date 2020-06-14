@@ -1,13 +1,28 @@
 import React, {useEffect, useState, useCallback} from 'react';
-import {SafeAreaView, StyleSheet, Text, View, TouchableOpacity, FlatList} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  FlatList,
+  TouchableOpacity,
+  Image,
+  Animated,
+} from 'react-native';
 import Header from '../../components/Header';
 import {useDispatch, useSelector} from 'react-redux';
-import {actFetchCategories} from '../../redux/actions';
+import {actFetchCategories, actGetProductCategory} from '../../redux/actions';
+import Icon from 'react-native-vector-icons/AntDesign';
+import FeatureProductItem from '../../components/FeatureProductItem';
+import PRODUCTS from '../../assets/database';
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
 
   const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const [fadeAnim, setFadeAnim] = useState(new Animated.Value(0));
+  const [slideAnim] = useState(new Animated.Value(-200));
 
   const [currentItemOnView, setCurrentItemOnView] = useState(0);
 
@@ -16,27 +31,18 @@ const HomeScreen = () => {
 
   useEffect(() => {
     dispatch(actFetchCategories());
-    /*Animated.timing(fadeAnim, {
-      toValue: 1,
-      duration: 2000,
-    }).start();
-
-    Animated.spring(slideAnim, {
-      toValue: 0,
-      duration: 2000,
-      friction: 1, //độ ma sát, càng lớn hoạt cảnh càng chậm
-      tension: 1, //độ căn, càng lớn hoạt cảnh càng lâu
-    }).start();*/
-  }, [dispatch]);
+  }, [dispatch, fadeAnim, slideAnim]);
 
   const handleChangeCategory = useCallback(id => () => {
     setSelectedCategory(id);
     //call API, gửi id category lên lấy ds sản phẩm
     //lưu lên store 
     //tại Home, lấy xuống
+    
+    
+  },[dispatch]);
 
-  },[]);
-
+ 
   //Lưu giá trị vị trí người dùng kéo đến
   const handleChange = useCallback(params => {
     console.log(params.changed);
@@ -66,6 +72,21 @@ const HomeScreen = () => {
           }}
         />
       </View>
+      <View>
+        <FlatList
+          data={PRODUCTS}
+          keyExtractor={item => item.id}
+          horizontal
+          viewabilityConfig={{
+            waitForInteraction: true,
+            viewAreaCoveragePercentThreshold: 80,
+          }}
+          onViewableItemsChanged={handleChange}
+          renderItem={({item, index}) => (
+            <FeatureProductItem  item={item} isCurrent={index === currentItemOnView} />
+          )}
+        />
+      </View>
     </SafeAreaView>
   );
 };
@@ -74,7 +95,6 @@ export default HomeScreen;
 
 const styles = StyleSheet.create({
   categoryContainer: {
-    flex: 1,
     marginTop: 20,
   },
   categoryItem: {
